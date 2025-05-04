@@ -2,6 +2,7 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.4/font/bootstrap-icons.min.css">
     
@@ -11,320 +12,72 @@
     <title>Bank Treina</title>
 </head>
 <body>
-    <header>
-        <div class="badge-only">SR</div>
-        <div class="header-input">
-            <i class="bi bi-search"></i>
-            <input type="text" placeholder="Buscar">
-        </div >
-        <div class="badge-only">
-            <i class="bi bi-question-circle"></i>
+    
+    <div class="container">
+        <div class="box-image">
+            <img width="200" src="./image/picpay-home-4.webp" alt="">
         </div>
-        <div class="badge-only">
-            <i class="bi bi-chat-left-text"></i>
-        </div>
-        <div class="badge-only">
-            <i class="bi bi-bell"></i>
-        </div>
-    </header>
-
-    <main class="card-main">
-        <div class="flex-line">
-            <h4>Conta</h4>
-            <div>
-                <h4>Ver extrato</h4>
-                <i class="bi bi-chevron-right"></i>
-            </div>
-        </div>
-        <div class="flex-line-2">
-            <div class="column1">
-                <div class="column1-item">
-                    <h2>Saldo em conta</h2>
-                    <h2>R$ 22.550,65</h2>
-                </div>
-                <h6>Rendendo 102% do CDI</h6>
-            </div>
-            <div class="column2">
-                <i class="bi bi-eye"></i>
-            </div>
-        </div>
-        <button>Pagar pessoas em 12x</button>
-    </main>
-
-    <h2 class="titulo">Pro dia a dia</h2>
-
-    <div class="cards">
-        <div class="card-item-box">
-            <div class="card-item active">
-                <i class="bi bi-qr-code"></i>
-            </div>
-            <button>EM ATÉ 12X</button>
-            <h6>PIX</h6>
-        </div>
-        <div class="card-item-box">
-            <div class="card-item">
-                <i class="bi bi-receipt"></i>
-            </div>
-            <h6>Pagar Boleto</h6>
-        </div>
-        <div class="card-item-box">
-            <div class="card-item">
-                <i class="bi bi-piggy-bank"></i>
-            </div>
-            <h6>Cofrinhos</h6>
-        </div>
-        <div class="card-item-box">
-            <div class="card-item">
-                <i class="bi bi-credit-card"></i>
-            </div>
-            <h6>Cartão Virtual</h6>
+        <div class="btn-container">
+            <button class="btn-entrar">Acessar</button>
+            <button class="btn-sair">Sair da conta</button>
         </div>
     </div>
 
-    <div class="card-full">
-        <h3>Cartão</h3>
-        <i class="bi bi-credit-card"></i>
-    </div>
+    <script>
+        document.querySelector(".btn-entrar").addEventListener("click", function(event){
+            window.location.href = "home.html";
+        })
+        document.querySelector(".btn-sair").addEventListener("click", function(event){
+            let rsSair = confirm('Sair da sua conta?')
 
-    <div class="card-full">
-        <h3>Empréstimos</h3>
-        <button>
-            <h3>Pagar</h3>
-            <i class="bi bi-qr-code"></i>
-        </button>
-    </div>
-    <div class="footer">
-        <div class="footer-item">
-            <i class="bi bi-house-door"></i>
-            <h3>Início</h3>
-        </div>
-        <div class="footer-item">
-            <i class="bi bi-wallet2"></i>
-            <h3>Carteira</h3>
-        </div>
-        <div class="footer-item">
-            <i class="bi bi-credit-card"></i>
-            <h3>Cartão</h3>
-        </div>
-        <div class="footer-item">
-            <i class="bi bi-bag"></i>
-            <h3>Shop</h3>
-        </div>
-        <div class="footer-item">
-            <i class="bi bi-list"></i>
-            <h3>Menu</h3>
-        </div>
-    </div>
+            if(!rsSair){
+                return
+            }else{
+                window.location.href = "https://www.google.com.br";
+            }
+        })
+        
+    </script>
+
     <style>
-        *{
-            margin: 0;
-            padding: 0;
-            border: none;
-            box-sizing: border-box;
-            font-family: "Roboto", sans-serif;
-
+        body{
+            height: 100vh;
         }
-        html, body{
-            overflow: hidden;
-            width: 100vw;
-            margin: 0 auto;
-            max-width: 450px;
-            width: 100vw;
-            max-width: 445px;
-        }
-        header{            
-            width: 100vw;
-            max-width: 445px;
-            padding: 16px;
-            gap: 10px;
+        .container{
             display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-        .badge-only{
-            width: 40px;
-            height: 40px;
-            border-radius: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #1c1c1c;
-            background-color: #ebebeb; 
-        }
-        .badge-only i{
-            font-size: 22px;
-        }
-        .header-input{
-            flex: 1;
-            display: flex;
-            padding: 7px;
-            align-items: center;
-            background-color: #ebebeb; 
-            border-radius: 30px;
-        }
-        .header-input i{
-            padding-left: 5px;
-        }
-        .header-input input{
+            flex-direction: column;
             width: 100%;
-            outline: none;
-            padding-left: 5px;
-            background-color: #ebebeb; 
-        }
-        /* card principal */
-        .card-main{
-            width: 92%;
-            margin: 0 16px;
-            height: 195px;
-            padding: 16px;
-            border-radius: 10px;
-            color: #fff;
+            max-width: 450px;
+            height: 100vh;
             background-color: #11ddc5;
         }
-        .flex-line, div{
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-        .flex-line i{
-            padding-top: 1px;
-        }
-        .flex-line-2{
-            display: flex;
-            margin-top: 10px;
-            align-items: center;
-            justify-content: space-between;
-        }
-        .flex-line-2 .column1{
+        .box-image{
             flex: 1;
-            gap: 10px;
+            background-color: transparent;
+        }
+        .box-image img{
+            background-color: transparent;
+        }
+        .btn-container{
+            padding: 16px;
+            width: 100%;
             display: flex;
-            flex-direction: column;
-            align-items: start;
-        }
-        .flex-line-2 .column1 .column1-item{
-            display: flex;
-            align-items: start;
+            margin-bottom: 30px;
             flex-direction: column;
         }
-        .flex-line-2 .column2{
-            width: 40px;
-        }
-        .flex-line-2 .column2 i{
-            font-size: 25px;
-        }
-        .card-main button{
-            margin-top: 15px;
-            border-radius: 20px;
+        .btn-container button{
             padding: 12px;
             width: 100%;
-        }
-        /* fim card principal */
-        .titulo{
-            margin: 12px 16px;
-            font-size: 16px;
-        }
-        .cards{
-            width: 92%;
-            margin: 0 auto;
-            height: 120px;
-            border-radius: 10px;
             color: #fff;
+            font-weight: 600;
+            cursor: pointer;
+            background-color: transparent;
         }
-        .cards .card-item{
-            width: 80px;
-            height: 75px;
-            display: flex;
+        .btn-container .btn-entrar{
             border-radius: 7px;
-            align-items: center;
-            justify-content: center;
+            color: #11ddc5;
             background-color: #ebebeb;
-        }
-        .cards .card-item i{
-            color: #464444;
-            font-size: 35px;
-        }
-        .cards .card-item.active{
-            background-color: #11ddc5;
-        }
-        .cards .card-item.active i{
-            color: white;
-        }
-        .card-item-box{
-            height: 115px;
-            gap: 5px;
-            display: flex;
-            justify-content: start;
-            flex-direction: column;
-
-        }
-        .card-item-box button{
-            font-size: 11px;
-            padding: 2px;
-            color: #fff;
-            border-radius: 7px;
-            background-color: black;
-        }
-        .card-item-box h6{
-            color: #000;
-            font-weight: 300;
-        }
-        .card-full{
-            width: 92%;
-            margin: 14px 16px;
-            height: 70px;
-            padding: 16px;
-            border-radius: 15px;
-            background-color: #ebebeb;
-        }
-        .card-full h3{
-            font-weight: 400;
-        }
-        .card-full i{
-            font-size: 20px;
-        }
-        .card-full button{
-            gap: 5px;
-            color: #fff;
-            display: flex;
-            font-size: 16px;
-            border-radius: 30px;
-            padding: 13px 15px;
-            width: 90px;
-            align-items: center;
-            background-color: #000;
-        }
-        .card-full button h3{
-            font-size: 14px;
-        }
-        .card-full h3{
-            font-size: 16px;
-        }
-        .footer{
-            width: 100vw;
-            max-width: 445px;
-            border-top-right-radius: 40px;
-            border-top-left-radius: 40px;
-
-            position: absolute;
-            bottom: 0;
-
-            display: flex;
-            padding: 20px;
-            margin-top: 20px;
-            background-color: #ebebeb;
-            justify-content: space-around;
-        }
-        .footer .footer-item{
-            display: flex;
-            flex-direction: column;
-        }
-        .footer .footer-item  i{
-            font-size: 28px;
-        }
-        .footer .footer-item  h3{
-            font-weight: 300;
-            font-size: 12px;
+            margin-bottom: 10px;
         }
     </style>
 </body>
