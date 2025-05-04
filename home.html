@@ -90,7 +90,19 @@
             <div class="card-item">
                 <i class="bi bi-credit-card"></i>
             </div>
-            <h6>Cartão Virtual</h6>
+            <h6>Cartão Débito</h6>
+        </div>
+        <div class="card-item-box">
+            <div class="card-item">
+                <i class="bi bi-hourglass"></i>
+            </div>
+            <h6>Históricos</h6>
+        </div>
+        <div class="card-item-box">
+            <div class="card-item">
+                <i class="bi bi-credit-card-2-front"></i>
+            </div>
+            <h6>Cartão Crédito</h6>
         </div>
     </div>
 
@@ -235,6 +247,7 @@
         }
         .card-main-body .card-body-right{
             width: 60px;
+            cursor: pointer;
             background-color: transparent;
         }
         .card-main-body .card-body-right i{
@@ -256,11 +269,27 @@
         }
         .cards{
             width: 92%;
+            overflow-x: scroll;
+            overflow-y: hidden;
+            gap: 10px;
+            display: flex;
+
             margin: 0 auto;
-            height: 120px;
+            height: 160px;
             border-radius: 10px;
             color: #fff;
         }
+        /* ::-webkit-scrollbar-track {
+            background-color: #ebebeb;
+        }
+        ::-webkit-scrollbar {
+            width: 6px;
+            background: red;
+        }
+        ::-webkit-scrollbar-thumb {
+            cursor: pointer;
+            background: #42C897;   
+        } */
         .cards .card-item{
             width: 80px;
             height: 75px;
